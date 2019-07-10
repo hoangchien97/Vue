@@ -1,21 +1,14 @@
 new Vue({
     el: "#app",
     data:{
-        age:23,
-        x: 0,
-        y: 0
+        
     },
     methods: {
-        add: function(increment){
-            this.age += increment;
+        logName: function(){
+            console.log('you enter your name');
         },
-        subtract: function(decrement){
-            this.age -= decrement;
-        },
-        updateXY:function(event){
-            // console.log(event);
-            this.x = event.offsetX;
-            this.y = event.offsetY
+        logAge: function(){
+            console.log('you enter your age');
         }
     },
 })
