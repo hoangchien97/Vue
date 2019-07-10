@@ -50,10 +50,15 @@ Từ đây mình muốn rút ra cho các bạn một số điểm khác biệt g
 new Vue({
     el: "#app",
     data:{
-        error: false,
-        success: false
+        characters: ['Mario','Luigi','Yoshi','Bower'],
+        ninjas: [
+            {name:'Ryu', age:25},
+            {name: 'Ken',age: 55},
+            {name: 'Yoshi',age: 35}
+        ]
     },
     methods: {
+        
     },
     computed: {
     },
