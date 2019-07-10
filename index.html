@@ -10,11 +10,13 @@
 </head>
 <body>
     <div id="app">
-        <h1>Data Binding</h1>
-        <a v-bind:href="website">Facebook</a>
-        <br>
-        <input type="text" v-bind:value="job">
-        <p v-html="websiteTag"></p>
+        <h1>Events</h1>
+        <button v-on:click="add">Add a year</button>
+        <button v-on:click="subtract(1)">Subtract a year</button>
+        <button v-on:dbclick="add(10)">Add a year</button>
+        <button v-on:dbclick="subtract(10)">Subtract a year</button>
+        <p>My age is {{age}}</p>
+        <div id="canvas" @mousemove="updateXY">{{x}},{{y}}</div>
     </div>
     <script src="./app.js"></script>
 </body>
