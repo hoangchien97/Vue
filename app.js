@@ -50,24 +50,17 @@ Từ đây mình muốn rút ra cho các bạn một số điểm khác biệt g
 new Vue({
     el: "#app",
     data:{
-        age: 23,
-        a: 0,
-        b: 0
+        available: true,
+        nearby : true
     },
-    // methods: {
-    //     addToA: function(){
-    //         return this.age + this.a 
-    //     },
-    //     addToB: function(){
-    //         return this.age + this.b;
-    //     }
-    // },
+    methods: {
+    },
     computed: {
-        addToA: function(){
-            return this.age + this.a 
-        },
-        addToB: function(){
-            return this.age + this.b;
+        compClasses:function(){
+            return {
+                available: this.available,
+                nearby: this.nearby
+            }
         }
     },
 })
