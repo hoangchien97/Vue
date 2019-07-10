@@ -50,17 +50,11 @@ Từ đây mình muốn rút ra cho các bạn một số điểm khác biệt g
 new Vue({
     el: "#app",
     data:{
-        available: true,
-        nearby : true
+        error: false,
+        success: false
     },
     methods: {
     },
     computed: {
-        compClasses:function(){
-            return {
-                available: this.available,
-                nearby: this.nearby
-            }
-        }
     },
 })

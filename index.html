@@ -10,18 +10,17 @@
 </head>
 <body>
     <div id="app">
-        <h1>Dynamic CSS</h1>
-        <h2>Example 1</h2>
-        <!-- <div v-bind:class="{red:false, blue:true}"></div> -->
-        <!-- <div @click="available = !available" v-bind:class="{available: available}">
-            <span>Ryu</span>
-        </div> -->
-        <h2>Example 2</h2>
-        <button @click="nearby = !nearby">Toggle nearby</button>
-        <button @click="available = !available">Toggle available</button>
-        <div v-bind:class="compClasses">
-            <span>Ryu</span>
-        </div>
+        <h1>Conditionals(Dieu kien)</h1>
+        <button @click="error = !error">Toggle Error</button>
+        <button @click="success = !success">Toggle Success</button>
+        <!-- <p v-if="error">
+            There has been an error
+        </p>
+        <p v-else-if="success">
+            Whooo, success :) !!!
+        </p> -->
+        <p v-show="error">There has been an error</p>
+        <p v-show="success"> Whooo, success :) !!!</p>
     </div>
     <script src="./app.js"></script>
 </body>
