@@ -5,27 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>VueJS Tutorial</title>
-    <link rel="stylesheet" href="style.css" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 </head>
 <body>
     <div id="app">
-        <h1>Looping through lists</h1>
-        <!-- {{characters[0]}}
-        {{characters[1]}} -->
-        <ul>
-            <li v-for="character in characters">{{character}}</li>
-        </ul>
-        <ul>
-            <li v-for="(ninja,index) in ninjas">
-                {{index}}.{{ninja.name}} - {{ninja.age}}
-            </li>
-        </ul>
-        <template v-for="ninja in ninjas">
-            <div v-for="(val,key) in ninja">
-                <p>{{key}} - {{val}}</p>
-            </div>
-        </template>
+        <!-- bag image -->
+        <div id="bag" v-bind:class="{burst:ended}"></div>
+        <!-- bag health -->
+        <div id="bag-health">
+            <div v-bind:style="{width:health + '%'}"></div> <!-- 10%,2-30%... --> 
+        </div>
+        <!-- game controls -->
+        <div id="controls">
+            <button @click="punch" v-show="!ended">Punch</button>
+            <button @click="restart">Restart</button>
+        </div>
     </div>
     <script src="./app.js"></script>
 </body>
