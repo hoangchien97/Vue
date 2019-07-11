@@ -18,7 +18,8 @@ export default {
     },
     methods:{
         changeTitle(){
-            this.title = "Vue Wizards is changed"
+            // this.title = "Vue Wizards is changed"
+            this.$emit('changeTitle','Vue Wizards is changed')
         }
     }    
 }

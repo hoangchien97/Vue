@@ -1,5 +1,5 @@
 <template>
-    <div id="ninjas">
+    <div id="ninjas" >
         <!-- <p>{{ninjas}}</p> -->
         <ul>
             <li 
