@@ -1,22 +1,30 @@
 <template>
-    <div>
-        <h1>{{ title }}</h1>
-        <ninjas></ninjas>
-    </div>
+  <div>
+    <app-header></app-header>
+    <app-content></app-content>
+    <app-footer></app-footer>
+  </div>
 </template>
 
 <script>
-// Imports
-import Ninjas from './Ninjas.vue';
+// Root components import cac component con khac
+
+import Header from './components/Header'
+import Footer from './components/Footer'
+import Content from './components/Content'
+
 export default {
-    components: {
-        'ninjas': Ninjas
-    },
-    data () {
-        return {
-          title: 'Ninja App'
-        }
+  components:{
+    // component_name : Component
+    'app-header': Header,
+    'app-footer': Footer,
+    'app-content' : Content
+  },
+  data(){
+    return {
+
     }
+  }    
 }
 </script>
 
