@@ -2,22 +2,19 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title>VueJS Tutorials</title>
+        <title>References</title>
         <link href="styles.css" rel="stylesheet" />
         <script src="https://unpkg.com/vue"></script>
     </head>
     <body>
         <h1>Templates</h1>
         <div id="vue-app-one">
-            <h1>Vue App One</h1>
-            <greeting></greeting>
+            <h2>Refs</h2>
+            <input type="text" ref="input">
+            <button @click="readRefs()">Submit</button>
+            <p>Your favourite food : {{output}}</p>
+            <div ref="test"></div>
         </div>
-        <div id="vue-app-two">
-            <h1>Vue App Two</h1>
-            <greeting></greeting>
-        </div>
-        <!--<div class="test"></div>
-        <div class="test"></div> -->
     </body>
 
     <script src="app.js"></script>
