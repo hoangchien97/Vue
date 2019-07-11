@@ -9,19 +9,17 @@
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 </head>
 <body>
-    <div id="app">
-        <!-- bag image -->
-        <div id="bag" v-bind:class="{burst:ended}"></div>
-        <!-- bag health -->
-        <div id="bag-health">
-            <div v-bind:style="{width:health + '%'}"></div> <!-- 10%,2-30%... --> 
-        </div>
-        <!-- game controls -->
-        <div id="controls">
-            <button @click="punch" v-show="!ended">Punch</button>
-            <button @click="restart">Restart</button>
-        </div>
+    <div id="app1">
+        <h2>{{title}}</h2>
+        {{greet}}
     </div>
+
+    <div id="app2">
+        <h2>{{title}}</h2>
+        {{greet}}
+        <button @click="changTitle">Change App One Title</button>        
+    </div>
+
     <script src="./app.js"></script>
 </body>
 </html>
