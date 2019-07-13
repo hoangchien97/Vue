@@ -35,6 +35,24 @@ export default {
             this.ninjas.pop();
         }
     },
+    beforeCreate(){
+        alert("before create");
+    },
+    created() {
+        alert("created")
+    },
+    beforeMount() {
+        alert("before mounted")
+    },
+    mounted() {
+        alert("mounted")
+    },
+    beforeUpdate() {
+        alert("before update")
+    },
+    updated() {
+        alert("update")
+    },
 }
 </script>
 

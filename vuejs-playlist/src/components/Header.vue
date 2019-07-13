@@ -1,3 +1,5 @@
+'
+
 <template>
     <header>
         <h1 @click="changeTitle">{{title}}</h1>
@@ -5,6 +7,8 @@
 </template>
 
 <script>
+import { bus } from './../main'
+
 export default {
     props: {
         title: {
@@ -19,7 +23,9 @@ export default {
     methods:{
         changeTitle(){
             // this.title = "Vue Wizards is changed"
-            this.$emit('changeTitle','Vue Wizards is changed')
+            // this.$emit('changeTitle','Vue Wizards is changed')
+            this.title = 'Vue Wizards';
+            bus.$emit("titleChange","Vue Wizards is changed");
         }
     }    
 }
