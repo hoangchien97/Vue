@@ -6,8 +6,8 @@ new Vue({
     },
     methods: {
         punch: function(){
-            this.healtah -= 10
-            if(this.health < 0){
+            this.health -= 10
+            if(this.health <= 0){
                 this.ended = true;
             }
         },
