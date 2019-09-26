@@ -9,7 +9,13 @@ export default {
         return{
             
         }
+    },
+    props:{
+        copyright: {
+            type: String
+        }
     }
+    
 }
 </script>
 <style scoped>
