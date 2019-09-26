@@ -7,7 +7,7 @@
 export default {
     data(){
         return{
-            title: 'Vue Ninjas'
+            
         }
     }
 }
