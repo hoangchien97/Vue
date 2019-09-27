@@ -1,28 +1,19 @@
 <template>
     <div>
-        <keep-alive>
-            <component :is="currentTabComponent"></component>
-        </keep-alive>
-        <button @click="currentTabComponent = 'form-one'">Show form one</button>
-        <button @click="currentTabComponent = 'form-two'">Show form two</button>
+        <app-blog/>
     </div>
 </template>
 
 <script>
 // Imports
-import FormOne from './components/FormOne.vue';
-import FormTwo from './components/FormTwo.vue';
-import FormHelper from './components/FormHelper.vue';
+import AppBlog from './components/AppBlog.vue';
 
 export default {
     components: {
-        FormOne,
-        FormTwo,
-        FormHelper
+        AppBlog
     },
     data () {
         return {
-            currentTabComponent: 'form-one'
         }
     },
     methods:{
