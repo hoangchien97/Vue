@@ -2,6 +2,8 @@ import Vue from 'vue'
 import App from './App.vue'
 //import Ninjas from './Ninjas.vue'
 
+export const eventBus = new Vue()
+
 //Vue.component('ninjas', Ninjas);
 
 new Vue({

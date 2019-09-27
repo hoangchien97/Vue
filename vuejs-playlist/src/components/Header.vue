@@ -4,6 +4,7 @@
     </header>
 </template>
 <script>
+import { eventBus } from './../main.js'
 export default {
     data(){
         return{
@@ -22,10 +23,16 @@ export default {
         //     this.title = "Vue wizards"
         // }
 
-        // c2
+        // c2 Header ( child ) -> Ninjas ( parent )
+        // changeTitle: function(){
+        //     this.$emit('changeTitle','Vue wizards, child to parent component!');
+        // }
+
+        // c3 Header ( child ) -> Footer  (child ) using eventBus.$emit
         changeTitle: function(){
-            this.$emit('changeTitle','Vue wizards, child to parent component!');
-        }
+            this.title = 'Vue wizards, child to parent component!';
+            eventBus.$emit('titleChanged','Vue wizards, child to parent component!');
+        } 
     }
 }
 </script>

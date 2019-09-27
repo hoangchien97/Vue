@@ -1,19 +1,29 @@
 <template>
     <footer>
+        <h2>{{title}}</h2>
         <p>{{ copyright }}</p>
     </footer>
 </template>
 <script>
+import { eventBus } from './../main.js'
 export default {
+    props:{
+        copyright: {
+            type: String
+        },
+        title:{
+            type: String
+        }
+    },
     data(){
         return{
             
         }
     },
-    props:{
-        copyright: {
-            type: String
-        }
+    created(){
+        eventBus.$on('titleChanged',(data)=>{
+            this.title = data;
+        })
     }
     
 }

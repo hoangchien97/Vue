@@ -36,7 +36,7 @@ export default {
         }
     },
     methods:{
-        updateTitle(updateTitle){
+        updateTitle: function(updateTitle){
             this.title = updateTitle;
         }
     }
