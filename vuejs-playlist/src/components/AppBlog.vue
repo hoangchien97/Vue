@@ -16,6 +16,10 @@
                 <label for="">Winzards</label>
                 <input type="checkbox" value="winz" v-model="blog.categories">
             </div>
+            <label for="Author"></label>
+            <select name="" id="" v-model="blog.author">
+                <option v-for="(author, index) in authors" :key="index">{{author}}</option>
+            </select>
         </form>
         <div id="preview">
             <h3>Preview blog</h3>
@@ -23,10 +27,11 @@
             <p>Blog content:</p>
             <p style="white-space: pre">{{ blog.content }}</p>
             <!-- <span>Categories: {{ blog.categories }}</span> -->
-            <p>Blog Categories</p>
+            <p>Blog categories: </p>
             <ul>
                 <li v-for="(category, index) in blog.categories" :key="index">{{category}}</li>
             </ul>
+            <p>Blog author: {{blog.author}} </p>
         </div>
     </div>
 </template>
@@ -37,11 +42,13 @@
 export default {
   data() {
     return {
-      blog: {
-        title: "",
-        content: "",
-        categories: []
-      }
+        blog: {
+            title: "",
+            content: "",
+            categories: [],
+            author: ""
+        },
+        authors: ['The Net Ninja', 'The Angular Avenger', 'The Vue Vindicator']
     };
   },
   methods: {}
