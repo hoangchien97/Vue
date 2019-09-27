@@ -12,12 +12,19 @@ export default {
     },
     props: {
         title:{
-            type: String
+            type: String,
+            required: true
         }
     },
     methods:{
+        // c1
+        // changeTitle: function(){
+        //     this.title = "Vue wizards"
+        // }
+
+        // c2
         changeTitle: function(){
-            this.title = "Vue wizards"
+            this.$emit('changeTitle','Vue wizards, child to parent component!');
         }
     }
 }

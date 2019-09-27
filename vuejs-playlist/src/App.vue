@@ -1,8 +1,11 @@
 <template>
     <div>
-        <app-header :title="title"></app-header>
+        <app-header 
+            :title="title"
+            @changeTitle="updateTitle($event)"
+        ></app-header>
         <app-ninjas :ninjas="ninjas"></app-ninjas>
-        <app-footer :copyright="copyright"></app-footer>
+        <app-footer :copyright="copyright" :title="title"></app-footer>
     </div>
 </template>
 
@@ -30,6 +33,11 @@ export default {
           ],
           title: 'Vue Ninjas',
           copyright: 'Copyright 2019 Chien HD'
+        }
+    },
+    methods:{
+        updateTitle(updateTitle){
+            this.title = updateTitle;
         }
     }
 }
