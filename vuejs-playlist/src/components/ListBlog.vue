@@ -1,8 +1,8 @@
 <template>
-  <div id="list-blog">
-        <h1>All Blog Articles</h1>
+  <div id="list-blog" v-theme="'wide'">
+        <h1 >All Blog Articles</h1>
         <div v-for="(blog, index) in blogs" :key="index" class="single-blog">
-            <h2>{{ blog.title }}</h2>
+            <h2 v-rainbow>{{ blog.title }}</h2>
             <article>{{ blog.body }}</article>
         </div>
   </div>
@@ -26,7 +26,7 @@ export default {
 }
 </script>
 
-<style>
+<style scopped>
 #show-blogs{
     max-width: 800px;
     margin: 0px auto;
