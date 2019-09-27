@@ -1,16 +1,18 @@
 <template>
     <div>
-        <app-blog/>
+        <!-- <app-blog/> -->
+        <list-blog/>
     </div>
 </template>
 
 <script>
 // Imports
 import AppBlog from './components/AppBlog.vue';
-
+import ListBlog from './components/ListBlog';
 export default {
     components: {
-        AppBlog
+        AppBlog,
+        ListBlog
     },
     data () {
         return {
