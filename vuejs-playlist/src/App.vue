@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="container">
         <!-- <app-blog/> -->
         <list-blog/>
     </div>
