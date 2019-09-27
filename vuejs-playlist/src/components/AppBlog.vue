@@ -1,17 +1,32 @@
 <template>
-  <div id="add-blog">
-    <h2>Add a New Blog Post</h2>
-    <form>
-        <label>Blog Title:</label>
-        <input type="text" v-model.lazy="blog.title" required />
-        <label>Blog Content:</label>
-        <textarea v-model.lazy.trim="blog.content"></textarea>
-    </form>
-    <div id="preview">
-        <h3>Preview blog</h3>
-        <p>Blog title: {{ blog.title }}</p>
-        <p>Blog content:</p>
-        <p style="white-space: pre">{{ blog.content }}</p>
+    <div id="add-blog">
+        <h2>Add a New Blog Post</h2>
+        <form>
+            <label>Blog Title:</label>
+            <input type="text" v-model.lazy="blog.title" required />
+            <label>Blog Content:</label>
+            <textarea v-model.lazy.trim="blog.content"></textarea>
+            <div id="checkboxes">
+                <label for="">Ninjas</label>
+                <input type="checkbox" value="ninjas" v-model="blog.categories">
+                <label for="">Cheese</label>
+                <input type="checkbox" value="cheese" v-model="blog.categories">
+                <label for="">Mario</label>
+                <input type="checkbox" value="mario" v-model="blog.categories">
+                <label for="">Winzards</label>
+                <input type="checkbox" value="winz" v-model="blog.categories">
+            </div>
+        </form>
+        <div id="preview">
+            <h3>Preview blog</h3>
+            <p>Blog title: {{ blog.title }}</p>
+            <p>Blog content:</p>
+            <p style="white-space: pre">{{ blog.content }}</p>
+            <!-- <span>Categories: {{ blog.categories }}</span> -->
+            <p>Blog Categories</p>
+            <ul>
+                <li v-for="(category, index) in blog.categories" :key="index">{{category}}</li>
+            </ul>
         </div>
     </div>
 </template>
@@ -24,7 +39,8 @@ export default {
     return {
       blog: {
         title: "",
-        content: ""
+        content: "",
+        categories: []
       }
     };
   },
@@ -57,5 +73,12 @@ textarea {
 }
 h3 {
   margin-top: 10px;
+}
+#checkboxes input{
+    display: inline-block;
+    margin: 10px;
+}
+#checkboxes label{
+    display: inline-block;
 }
 </style>
